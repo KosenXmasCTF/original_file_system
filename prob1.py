@@ -6,7 +6,7 @@ image.write(b'\x00')
 image.write(b'mydir\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00')
 image.write(b'\x00\x00\x00\x00')
 image.write(b'\x00\x00\x00\x01')
-offset = (image.tell()+1).to_bytes(4,byteorder='big')
+offset = (image.tell()+4).to_bytes(4,byteorder='big')
 image.write(offset)
 image.write(b'\x02')
 

@@ -32,4 +32,19 @@ print("filename:", filename)
 filesize = image.read(4)
 print("filesize:", filesize)
 
-print(fileflag)
+fileflag = int.from_bytes(fileflag,'big')
+
+if fileflag & 0b10:
+    print("encrypted file name detected.")
+
+    #filename = [j for j in filename]
+
+    key =  "xm4s!xm4s!xm4s!xm4s!xm4s!xm4s!xm4s!"
+    key = [ord(j) for j in key]
+    #flag = [ord(j) for j in flag]
+    
+    dec = [key[j] ^ filename[j] for j in range(len(filename))]
+    dec = b''.join([j.to_bytes(1,byteorder='big') for j in dec])
+    print(dec)
+else:
+    print(filename)
