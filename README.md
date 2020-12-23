@@ -1,3 +1,9 @@
-!! caution !!
+# Files
 
-This problem is on work in progress.
+- katiofs.md
+- prob1.img
+
+# Writeup
+
+- prob1.py
+- writeup.py
