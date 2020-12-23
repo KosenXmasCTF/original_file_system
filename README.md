@@ -1,5 +1,6 @@
 # Files
 
+- katiofs.md
 - prob1.img
 
 # Writeup
